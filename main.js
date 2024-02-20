@@ -66,5 +66,3 @@ function range(){
     
     return out;
 }
-
-console.log(range(5,3,-1));
