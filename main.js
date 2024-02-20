@@ -63,6 +63,9 @@ function range(){
             out.push(index);
         }
     }
-    
     return out;
+}
+
+function round(number,digits){
+    return Math.round(number*10**digits)/10**digits;
 }
