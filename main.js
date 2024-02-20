@@ -40,4 +40,31 @@ function str(n){
 function len(n){
     return n.length;
 }
-// function slice(arr,start,stop=arr.length,step=1)
+
+function range(){
+    let start;
+    let stop;
+    let step;
+    if (arguments.length == 1){
+        [start,stop,step] = [0,arguments[0],1];
+    } else if (arguments.length == 2) {
+        [start,stop,step] = [arguments[0],arguments[1],1];
+    } else {
+        [start,stop,step] = [arguments[0],arguments[1],arguments[2]];
+    }
+    
+    let out = [];
+    if (step<0){
+        for (let index = start; index > stop; index+=step) {
+            out.push(index);
+        }
+    } else {
+        for (let index = start; index < stop; index+=step) {
+            out.push(index);
+        }
+    }
+    
+    return out;
+}
+
+console.log(range(5,3,-1));
