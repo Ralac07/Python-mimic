@@ -69,3 +69,12 @@ function range(){
 function round(number,digits){
     return Math.round(number*10**digits)/10**digits;
 }
+
+function chr(__i){
+    return String.fromCharCode(__i);
+}
+
+function ord(__c){
+    return __c.charCodeAt(0);
+}
+
