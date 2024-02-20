@@ -40,3 +40,4 @@ function str(n){
 function len(n){
     return n.length;
 }
+// function slice(arr,start,stop=arr.length,step=1)
