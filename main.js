@@ -79,5 +79,7 @@ function chr(__i){
 function ord(__c){
     return __c.charCodeAt(0);
 }
-
-console.log(range(15,5,-2))
+const ogjoin = Array.prototype.join
+String.prototype.join = function(del) {
+    return ogjoin.call(del); 
+};
