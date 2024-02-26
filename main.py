@@ -1,2 +1,1 @@
-# Just here for testing
-ord()
+print(list(range(5,15,2)))

@@ -34,9 +34,11 @@ function int(n, base=10){
 function float(n){
     return parseFloat(String(n));
 }
+
 function str(n){
     return String(n);
 }
+
 function len(n){
     return n.length;
 }
@@ -59,7 +61,7 @@ function range(){
             out.push(index);
         }
     } else {
-        for (let index = start; index < stop; index+=step) {
+        for (let index = start; index < stop; index-=step) {
             out.push(index);
         }
     }
@@ -78,3 +80,4 @@ function ord(__c){
     return __c.charCodeAt(0);
 }
 
+console.log(range(15,5,-2))
