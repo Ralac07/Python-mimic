@@ -79,7 +79,9 @@ function chr(__i){
 function ord(__c){
     return __c.charCodeAt(0);
 }
-const ogjoin = Array.prototype.join
+const ogjoin = Array.prototype.join;
 String.prototype.join = function(del) {
     return ogjoin.call(del); 
 };
+
+console.log(" and ".join(["red","blue"]))
