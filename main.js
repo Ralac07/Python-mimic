@@ -84,4 +84,4 @@ String.prototype.join = function(del) {
     return ogjoin.call(del); 
 };
 
-console.log(" and ".join(["red","blue"]))
+// console.log(" and ".join(["red","blue"]))
