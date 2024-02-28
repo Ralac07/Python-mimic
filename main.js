@@ -42,7 +42,6 @@ function str(n){
 function len(n){
     return n.length;
 }
-//! CURRENTLY GIVES ERROR
 function range(){
     let start;
     let stop;
@@ -78,7 +77,7 @@ function chr(__i){
 function ord(__c){
     return __c.charCodeAt(0);
 }
-const ogjoin = Array.prototype.join;
+/*const ogjoin = Array.prototype.join;
 String.prototype.join = function(del) {
-    return ogjoin.call(del); 
-};
+    return join.call(del); 
+}; */
