@@ -42,7 +42,7 @@ function str(n){
 function len(n){
     return n.length;
 }
-
+//! CURRENTLY GIVES ERROR
 function range(){
     let start;
     let stop;
@@ -54,14 +54,13 @@ function range(){
     } else {
         [start,stop,step] = [arguments[0],arguments[1],arguments[2]];
     }
-    
     let out = [];
-    if (step<0){
-        for (let index = start; index > stop; index+=step) {
+    if (step>0){
+        for (let index = start; index < stop; index+=step) {
             out.push(index);
         }
     } else {
-        for (let index = start; index < stop; index-=step) {
+        for (let index = stop; index > start; index-=step) {
             out.push(index);
         }
     }
@@ -83,3 +82,5 @@ const ogjoin = Array.prototype.join;
 String.prototype.join = function(del) {
     return ogjoin.call(del); 
 };
+
+console.log(range(1,5));
