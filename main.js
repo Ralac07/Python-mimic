@@ -82,5 +82,3 @@ const ogjoin = Array.prototype.join;
 String.prototype.join = function(del) {
     return ogjoin.call(del); 
 };
-
-console.log(range(1,5));
