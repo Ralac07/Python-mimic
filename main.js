@@ -81,9 +81,4 @@ function ord(__c){
 String.prototype.join = function(del) {
     return join.call(del); 
 }; */
-/**
- * 
- * @param {*} objects 
- * @param {string} sep
- */
 print = console.log;
