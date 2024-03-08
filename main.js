@@ -81,7 +81,9 @@ function ord(__c){
 String.prototype.join = function(del) {
     return join.call(del); 
 }; */
-
-
-
-console.log([1,2,3,4,5].join("|"))
+/**
+ * 
+ * @param {*} objects 
+ * @param {string} sep
+ */
+print = console.log;
