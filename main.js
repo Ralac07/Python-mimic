@@ -42,16 +42,16 @@ function str(n){
 function len(n){
     return n.length;
 }
-function range(){
+function range(...inputs){
     let start;
     let stop;
     let step;
-    if (arguments.length == 1){
-        [start,stop,step] = [0,arguments[0],1];
-    } else if (arguments.length == 2) {
-        [start,stop,step] = [arguments[0],arguments[1],1];
+    if (inputs.length == 1){
+        [start,stop,step] = [0,inputs[0],1];
+    } else if (inputs.length == 2) {
+        [start,stop,step] = [inputs[0],inputs[1],1];
     } else {
-        [start,stop,step] = [arguments[0],arguments[1],arguments[2]];
+        [start,stop,step] = [inputs[0],inputs[1],inputs[2]];
     }
     let out = [];
     if (step>0){
