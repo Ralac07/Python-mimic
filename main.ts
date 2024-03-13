@@ -1,21 +1,21 @@
 class random {
-    static random() {
+    static random():number {
         return (Math.random());
     }
-    static randint(a, b) {
+    static randint(a:number, b:number):number {
         return (Math.ceil(Math.random() * ((b - a) + 1)) + a - 1);
     }
-    static choice(arr) {
+    static choice(arr:Array<any>):any {
         return (arr[Math.ceil(Math.random() * arr.length) - 1]);
     }
-    static shuffle(arr) {
-        let wasString = false;
-        let len = arr.length;
+    static shuffle(arr:Array<any>|string):Array<any>|String {
+        let wasString:Boolean = false;
+        let len:number = arr.length;
         if (typeof (arr) == 'string') {
             arr = arr.split('');
             wasString = true;
         }
-        let newArr = [];
+        let newArr:Array<any> = [];
         for (let i = 0; i < len; i++) {
             newArr.push(arr.splice(Math.ceil(Math.random() * arr.length) - 1, 1)[0]);
         }
@@ -23,26 +23,26 @@ class random {
     }
 }
 
-function type(n){
+function type(n:any){
     return typeof n;
 }
 
-function int(n, base=10){
+function int(n:string|number, base:number=10){
     return parseInt(String(n),base);
 }
 
-function float(n){
+function float(n:string|number){
     return parseFloat(String(n));
 }
 
-function str(n){
+function str(n:any){
     return String(n);
 }
 
-function len(n){
+function len(n:any){
     return n.length;
 }
-function range(...inputs){
+function range(...inputs:any){
     let start;
     let stop;
     let step;
@@ -53,7 +53,7 @@ function range(...inputs){
     } else {
         [start,stop,step] = [inputs[0],inputs[1],inputs[2]];
     }
-    let out = [];
+    let out:Array<number> = [];
     if (step>0){
         for (let index = start; index < stop; index+=step) {
             out.push(index);
@@ -66,18 +66,23 @@ function range(...inputs){
     return out;
 }
 
-function round(number,digits){
+function round(number:number,digits:number):number{
     return Math.round(number*10**digits)/10**digits;
 }
 
-function chr(__i){
+function chr(__i:number):string{
     return String.fromCharCode(__i);
 }
 
-function ord(__c){
+function ord(__c:string):number{
     return __c.charCodeAt(0);
+}
+interface String {
+	join(arr:Array<any>): string;
 }
 String.prototype.join = function(arr) {
     return arr.join(this); 
 };
-print = console.log;
+function print(...inputs){
+    console.log(inputs);
+}
