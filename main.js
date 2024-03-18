@@ -81,3 +81,6 @@ String.prototype.join = function(arr) {
     return arr.join(this); 
 };
 print = console.log;
+
+const True = true;
+const False = false;
