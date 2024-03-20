@@ -89,36 +89,16 @@ const False = false;
 
 // https://www.w3schools.com/python/module_math.asp
 class math {
-	static acos(__x) {
-		return Math.acos(__x);
-	}
-	static acosh(__x) {
-		return Math.acosh(__x);
-	}
-	static asin(__x) {
-		return Math.asin(__x);
-	}
-	static asinh(__x) {
-		return Math.asinh(__x);
-	}
-	static atan(__x) {
-		return Math.atan(__x);
-	}
-	static atan2(__x) {
-		return Math.atan2(__x);
-	}
-	static atanh(__x) {
-		return Math.atanh(__x);
-	}
-	static ceil(__x) {
-		return Math.ceil(__x);
-	}
-	static comb(__x) {
-		return Math.comb(__x);
-	}
-	static copysign(__x) {
-		return Math.copysign(__x);
-	}
+	static acos = Math.acos;
+	static acosh = Math.acosh;
+	static asin = Math.asin;
+	static asinh = Math.asinh;
+	static atan = Math.atan;
+	static atan2 = Math.atan2;
+	static atanh = Math.atanh;
+	static ceil = Math.ceil;
+	static comb = Math.comb
+	static copysign = Math.copysign;
 	static cos(__x) {
 		return Math.cos(__x);
 	}
@@ -163,9 +143,27 @@ class math {
 
 		return sign * y;
 	}
-	static erfc() {
-		throw Error("Function not implemented");
+	static erfc(x) {
+		// Abramowitz and Stegun function 7.1.1
+		let a = 1253314137654376;
+		let b = -1.135203980240205;
+		let c = 1.341267915016756e-3;
+		let d = -3.722078785823172e-9;
+		let p = 0.254829592;
+		let q = 1.135203980240205;
+		let t = Math.abs(x);
+
+		let err;
+		if (t < 1) {
+			err = 1 - t / (p + q * t);
+		} else {
+			let z = Math.exp(-t * t);
+			err = (a + b * t) * z / (1 + c * t + d * t * t);
+		}
+
+		return x < 0 ? 1 + 2 * err : 1 - 2 * err;
 	}
+
 	static exp(x) {
 		return Math.E ** x;
 	}
@@ -183,9 +181,7 @@ class math {
 		}
 		return out;
 	}
-	static floor(__x) {
-		return Math.floor(__x);
-	}
+	static floor = Math.floor;
 	static fmod(x, y) {
 		return x % y * 1.0
 	}
@@ -204,7 +200,7 @@ class math {
 	}
 	static fsum(__x) {
 		let total = 0;
-		for (const i in __x) {
+		for (let i in __x) {
 			total += 1;
 		}
 		return total;
@@ -262,16 +258,16 @@ class math {
 		return Math.abs(a - b) <= absTol;
 	}
 
-	static isfinite(__x){
+	static isfinite(__x) {
 		return __x != Infinity;
 	}
-	static isinf(__x){
+	static isinf(__x) {
 		return __x == Infinity;
 	}
 	static isnan = isNaN;
 
-	static isqrt(__x){
-		return Math.floor(__x**0.5);
+	static isqrt(__x) {
+		return Math.floor(__x ** 0.5);
 	}
 	static ldexp(mantissa, exponent) { // https://blog.codefrau.net/2014/08/deconstructing-floats-frexp-and-ldexp.html
 		var steps = Math.min(3, Math.ceil(Math.abs(exponent) / 1023));
@@ -280,7 +276,7 @@ class math {
 			result *= Math.pow(2, Math.floor((exponent + i) / steps));
 		return result;
 	}
-	static lgamma(__x){
+	static lgamma(__x) {
 		let p = [0.99999999999980993, 676.5203681218851, -1259.1392167224028,
 			771.32342877765313, -176.61502916214059, 12.507343278686905,
 			-0.13857109526572012, 9.9843695780195716e-6, 1.5056327351493116e-7
@@ -308,8 +304,38 @@ class math {
 
 	static log2 = Math.log2;
 
-	static perm(n, r) { 
-		if (n < r) return -1 
-		return this.factorial(n) / this.factorial(n - r) 
-	} 
+	static perm(n, r) {
+		if (n < r) return -1
+		return this.factorial(n) / this.factorial(n - r)
+	}
+	static pow(x, y) {
+		return x ** y;
+	}
+	static prod(iterable, start = 1) {
+		for (let i in iterable) {
+			start *= i;
+		}
+		return start
+	}
+	static radians(__x) {
+		return degrees * (Math.PI / 180);
+	}
+	static remainder(x, y) {
+		// if (y === 0) {
+		// 	return x;
+		// }
+		return y === 0 ? x : ((x % absY) + Math.sign(y) * Math.abs(y)) % Math.abs(y);
+		// let sign = Math.sign(y);
+		// let absY = Math.abs(y);
+		// let remainder = x % absY;
+		// return (remainder + sign * absY) % absY;
+	}
+	static sin = Math.sin;
+	static sinh = Math.sinh;
+	static sqrt(__x) {
+		return __x ** 0.5;
+	}
+	static tan = Math.tan;
+	static tanh = Math.tanh;
+	static trunc = Math.trunc;
 }
