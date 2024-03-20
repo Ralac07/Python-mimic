@@ -1,6 +1,130 @@
-//TODO https://www.w3schools.com/python/python_ref_functions.asp
 
-// https://www.w3schools.com/python/module_random.asp
+/* Functions
+? Functions added so far
+* random.random()
+* random.randint()
+* random.choice()
+* random.shuffle()
+* type()
+* int()
+* float()
+* str()
+* len()
+* range()
+* round()
+* chr()
+* ord()
+* join
+* print()
+* True
+* False
+* math.acos()
+* math.acosh()
+* math.asin()
+* math.asinh()
+* math.atan()
+* math.atan2()
+* math.atanh()
+* math.ceil()
+* math.comb()
+* math.copysign()
+* math.cos()
+* math.cosh()
+* math.degrees()
+* math.dist()
+* math.erf()
+* math.erfc()
+* math.exp()
+* math.expm1()
+* math.fabs()
+* math.factorial()
+* math.floor()
+* math.fmod()
+* math.frexp()
+* math.fsum()
+* math.gamma()
+* math.gcd()
+* math.hypot()
+* math.isclose()
+* math.isfinite()
+* math.isinf()
+* math.isnan()
+* math.isqrt()
+* math.ldexp()
+* math.lgamma()
+* math.log()
+* math.log10()
+* math.log1p()
+* math,log2()
+* math.perm()
+* math.pow()
+* math.prod()
+* math.radians()
+* math.remainder()
+* math.sin()
+* math.sinh()
+* math.sqrt()
+* math.tan()
+* math.tanh()
+*/
+/* TODO
+https://www.w3schools.com/python/python_ref_functions.asp
+TODO ascii()
+TODO bin()
+TODO bool()
+TODO bytearray()
+TODO bytes()
+TODO callable()
+TODO classmethod()
+TODO compile()
+TODO complex()
+TODO delattr()
+TODO dict()
+TODO dir()
+TODO divmod()
+TODO enumerate()
+TODO eval()
+TODO exec()
+TODO filter()
+TODO format()
+TODO frozenset()
+TODO getattr()
+TODO globals()
+TODO hasattr()
+TODO hash()
+TODO help()
+TODO hex()
+TODO id()
+TODO input() likely not possible 
+TODO isinstance()
+TODO issubclass()
+TODO iter()
+TODO list()
+TODO locals()
+TODO map()
+TODO max() is in JS Math
+TODO memoryview()
+TODO min() is in JS Math
+TODO next()
+TODO object()
+todo oct()
+TODO open() might not be possible
+TODO pow()
+TODO property()
+TODO repr()
+TODO reversed()
+TODO set()
+TODO setattr()
+TODO slice()
+TODO sorted()
+TODO staticmethod()
+TODO sum()
+TODO super()
+TODO tuple()
+TODO vars()
+TODO zip()
+! Setting # to comment not possible
+*/
 class random {
 	static random() {
 		return (Math.random());
@@ -385,5 +509,10 @@ class math {
 		Math.trunc(...args);
 	}
 }
+function abs(n){
+	return Math.abs(n);
+}
 
-
+function all(iterable){
+	return iterable.includes(false)?false:true;
+}
