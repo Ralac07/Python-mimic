@@ -89,21 +89,41 @@ const False = false;
 
 // https://www.w3schools.com/python/module_math.asp
 class math {
-	static acos = Math.acos;
-	static acosh = Math.acosh;
-	static asin = Math.asin;
-	static asinh = Math.asinh;
-	static atan = Math.atan;
-	static atan2 = Math.atan2;
-	static atanh = Math.atanh;
-	static ceil = Math.ceil;
-	static comb = Math.comb
-	static copysign = Math.copysign;
-	static cos(__x) {
-		return Math.cos(__x);
+	static acos(...args){
+		Math.acos(...args);
 	}
-	static cosh(__x) {
-		return Math.cosh(__x);
+	static acosh(...args){
+		Math.acosh(...args);
+	}
+	static asin(...args){
+		Math.asin(...args);
+	}
+	static asinh(...args){
+		Math.asinh(...args);
+	}
+	static atan(...args){
+		Math.atan(...args);
+	}
+	static atan2(...args){
+		Math.atan2(...args);
+	}
+	static atanh(...args){
+		Math.atanh(...args);
+	}
+	static ceil(...args){
+		Math.ceil(...args);
+	}
+	static comb(...args){
+		Math.comb(...args);
+	}
+	static copysign(...args){
+		Math.copysign(...args);
+	}
+	static cos(...args){
+		Math.cos(...args);
+	}
+	static cosh(...args){
+		Math.cosh(...args);
 	}
 	static degrees(__x) {
 		return __x * (180 / Math.PI);
@@ -181,7 +201,9 @@ class math {
 		}
 		return out;
 	}
-	static floor = Math.floor;
+	static floor(...args){
+		Math.floor(...args);
+	}
 	static fmod(x, y) {
 		return x % y * 1.0
 	}
@@ -231,7 +253,9 @@ class math {
 		}
 		return a;
 	}
-	static hypot = Math.hypot;
+	static hypot(...args){
+		Math.hypot(...args);
+	}
 	static isClose(a, b, relTol = 1e-9, absTol = 0) {
 		// Handle cases where either a or b is NaN
 		if (isNaN(a) || isNaN(b)) {
@@ -264,7 +288,9 @@ class math {
 	static isinf(__x) {
 		return __x == Infinity;
 	}
-	static isnan = isNaN;
+	static isnan(...args){
+		isNaN(...args);
+	}
 
 	static isqrt(__x) {
 		return Math.floor(__x ** 0.5);
@@ -296,13 +322,21 @@ class math {
 
 		return Math.log(Math.sqrt(2 * Math.PI) * Math.pow(t, x + 0.5) * Math.exp(-t) * a);
 	}
-	static log = Math.log;
+	static log(...args){
+		Math.log(...args);
+	}
 
-	static log10 = Math.log10;
+	static log10(...args){
+		Math.log10(...args);
+	}
 
-	static log1p = Math.log1p;
+	static log1p(...args){
+		Math.log1p(...args);
+	}
 
-	static log2 = Math.log2;
+	static log2(...args){
+		Math.log2(...args);
+	}
 
 	static perm(n, r) {
 		if (n < r) return -1
@@ -330,12 +364,31 @@ class math {
 		// let remainder = x % absY;
 		// return (remainder + sign * absY) % absY;
 	}
-	static sin = Math.sin;
-	static sinh = Math.sinh;
+	static sin(...args){
+		Math.sin(...args);
+	}
+	static sinh(...args){
+		Math.sinh(...args);
+	}
 	static sqrt(__x) {
 		return __x ** 0.5;
 	}
-	static tan = Math.tan;
-	static tanh = Math.tanh;
-	static trunc = Math.trunc;
+	static tan(...args){
+		Math.tan(...args);
+	}
+	static tanh(...args){
+		Math.tanh(...args);
+	}
+	static trunc(...args){
+		Math.trunc(...args);
+	}
 }
+
+
+// Replace static sin = Math.sin;
+//With
+// class math {
+    // static sin(...args){
+    //     Math.sin(...args);
+	// }
+//}
