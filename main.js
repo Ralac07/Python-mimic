@@ -6,7 +6,7 @@ class random {
 		return (Math.random());
 	}
 	static randint(a, b) {
-		return (Math.ceil(Math.random() * ((b - a) + 1)) + a - 1);
+		return Math.ceil(Math.random() * b - a + 1) + a - 1;
 	}
 	static choice(arr) {
 		return (arr[Math.ceil(Math.random() * arr.length) - 1]);
