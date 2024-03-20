@@ -1,3 +1,5 @@
+//TODO https://www.w3schools.com/python/python_ref_functions.asp
+
 // https://www.w3schools.com/python/module_random.asp
 class random {
 	static random() {
@@ -385,10 +387,3 @@ class math {
 }
 
 
-// Replace static sin = Math.sin;
-//With
-// class math {
-    // static sin(...args){
-    //     Math.sin(...args);
-	// }
-//}
