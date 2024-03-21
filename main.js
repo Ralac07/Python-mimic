@@ -596,7 +596,7 @@ String.prototype.capitalize = function (theStr) {
 };
 String.prototype.casefold = function (theStr) {
 	//let inputs = this;
-	return theStr.toLowerCase();
+	// return theStr.toLowerCase();
 };
 
 console.log("ß".toLocaleLowerCase())
