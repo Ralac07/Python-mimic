@@ -5,6 +5,7 @@
 * random.randint()
 * random.choice()
 * random.shuffle()
+* bool()
 * type()
 * int()
 * float()
@@ -71,7 +72,6 @@
 https://www.w3schools.com/python/python_ref_functions.asp
 TODO ascii()
 TODO bin()
-TODO bool()
 TODO bytearray()
 TODO bytes()
 TODO callable()
@@ -515,4 +515,8 @@ function abs(n){
 
 function all(iterable){
 	return iterable.includes(false)?false:true;
+}
+
+function bool(object){
+	(object.length==0 || object==false || object === 0 || object == undefined)?false:true;
 }

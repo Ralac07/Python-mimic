@@ -1,2 +1,1 @@
-import math
-print(math.isclose(None,5))
+print(bool(0))
