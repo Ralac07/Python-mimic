@@ -73,6 +73,9 @@
 */
 /* TODO
 https://www.w3schools.com/python/python_ref_functions.asp
+TODO String prototype modifications https://www.w3schools.com/python/python_ref_string.asp
+TODO Array prototype modifications https://www.w3schools.com/python/python_ref_list.asp
+TODO Dictionary prototype modifications https://www.w3schools.com/python/python_ref_dictionary.asp
 TODO ascii()
 TODO bin()
 TODO bytearray()
