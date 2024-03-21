@@ -16,6 +16,8 @@
 * round()
 * chr()
 * ord()
+* min()
+* max()
 * join
 * print()
 * True
@@ -103,9 +105,7 @@ TODO iter()
 TODO list()
 TODO locals()
 TODO map()
-TODO max() is in JS Math
 TODO memoryview()
-TODO min() is in JS Math
 TODO next()
 TODO object()
 todo oct()
@@ -522,4 +522,19 @@ function bool(object){
 }
 function pow(a,b){
 	return a**b;
+}
+function min(...args){
+	if (typeof args[0] == "object"){
+		return Math.min(...args[0]);
+	} else {
+		return Math.min(...args);
+	}
+}
+
+function max(...args){
+	if (typeof args[0] == "object"){
+		return Math.max(...args[0]);
+	} else {
+		return Math.max(...args);
+	}
 }

@@ -1,4 +1,1 @@
-class math {
-    static sin(...args){
-        Math.sin(...args);
-}
+console.log(Math.min(...3,8,2) )

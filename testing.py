@@ -1,1 +1,1 @@
-print(bool(0))
+print(min([2,8,5]))
