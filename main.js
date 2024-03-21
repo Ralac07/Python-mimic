@@ -129,8 +129,10 @@ class random {
 	static random() {
 		return (Math.random());
 	}
-	static randint(a, b) {
-		return Math.ceil(Math.random() * b - a + 1) + a - 1;
+	static randint(min, max) { // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
 	static choice(arr) {
 		return (arr[Math.ceil(Math.random() * arr.length) - 1]);
