@@ -5,6 +5,7 @@
 * random.randint()
 * random.choice()
 * random.shuffle()
+* pow()
 * bool()
 * type()
 * int()
@@ -109,7 +110,6 @@ TODO next()
 TODO object()
 todo oct()
 TODO open() might not be possible
-TODO pow()
 TODO property()
 TODO repr()
 TODO reversed()
@@ -519,4 +519,7 @@ function all(iterable){
 
 function bool(object){
 	(object.length==0 || object==false || object === 0 || object == undefined)?false:true;
+}
+function pow(a,b){
+	return a**b;
 }
