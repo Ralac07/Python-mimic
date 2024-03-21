@@ -74,6 +74,21 @@
 /* TODO
 https://www.w3schools.com/python/python_ref_functions.asp
 TODO String prototype modifications https://www.w3schools.com/python/python_ref_string.asp
+TODO string.capitalize()
+TODO string.casefold()
+TODO string.center()
+TODO string.encode() might be difficult
+TODO string.endswith()
+TODO string.expandtabs()
+TODO string.find()
+TODO string.format()
+TODO string.format_map()
+TODO string.index()
+TODO string.isalnum()
+TODO string.isalpha()
+TODO string.isascii()
+TODO string.isdecimal()
+TODO Finish string prototype TODO's
 TODO Array prototype modifications https://www.w3schools.com/python/python_ref_list.asp
 TODO Dictionary prototype modifications https://www.w3schools.com/python/python_ref_dictionary.asp
 TODO ascii()
