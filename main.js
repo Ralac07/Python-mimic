@@ -588,3 +588,16 @@ function max(...args){
 		return Math.max(...args);
 	}
 }
+
+String.prototype.capitalize = function (theStr) {
+	//let inputs = this;
+	let temp = theStr.shift();
+	return temp.toUpperCase() + theStr.toLowerCase();
+};
+String.prototype.casefold = function (theStr) {
+	//let inputs = this;
+	return theStr.toLowerCase();
+};
+
+console.log("ß".toLocaleLowerCase())
+console.log("ß".toLowerCase())
