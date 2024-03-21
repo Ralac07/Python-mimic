@@ -217,6 +217,11 @@ const False = false;
 
 // https://www.w3schools.com/python/module_math.asp
 class math {
+	static e = 2.718281828459045;
+	static pi = 3.141592653589793;
+	static tau = 6.283185307179586;
+	static inf = Infinity;
+	static nan = NaN;
 	static acos(...args){
 		Math.acos(...args);
 	}
