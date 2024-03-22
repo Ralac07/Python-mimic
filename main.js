@@ -262,11 +262,7 @@ const False = false;
 
 // https://www.w3schools.com/python/module_math.asp
 class math {
-	e = 2.718281828459045;
-	pi = 3.141592653589793;
-	tau = 6.283185307179586;
-	inf = Infinity;
-	nan = NaN;
+
 	static acos(...args){
 		Math.acos(...args);
 	}
@@ -561,6 +557,11 @@ class math {
 		Math.trunc(...args);
 	}
 }
+math.e = 2.718281828459045;
+math.pi = 3.141592653589793;
+math.tau = 6.283185307179586;
+math.inf = Infinity;
+math.nan = NaN;
 function abs(n){
 	return Math.abs(n);
 }
@@ -605,3 +606,5 @@ String.prototype.capitalize = function (theStr) {
 // 	let inputs = this;
 // 	return ;
 // };
+
+print(math.pi)
