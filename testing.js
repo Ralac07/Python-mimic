@@ -1,7 +1,19 @@
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+String.prototype.lstrip = function (chars=" \r\n\t    "){
+    let theStr = this;
+    let output = theStr;
+    for (const [index, element] of theStr.split('').entries()) {
+        if (chars.split("").includes(element)){
+            output[index] = " ";
+            output = output.split("");
+            output[index] = " ";
+            output = output.join("");
+        } else {
+            break;
+        }
+        theStr = output.trimStart();
+    }
+    return theStr;
 }
 
-console.log(getRandomInt(-2,2))
+
+console.log("\n   hello   \n".lstrip()+"#");

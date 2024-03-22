@@ -254,7 +254,7 @@ function ord(__c) {
 String.prototype.join = function (arr) {
 	return arr.join(this);
 };
-function print(...args){
+function print(...args) {
 	console.log(...args);
 }
 const True = true;
@@ -263,40 +263,40 @@ const False = false;
 // https://www.w3schools.com/python/module_math.asp
 class math {
 
-	static acos(...args){
+	static acos(...args) {
 		Math.acos(...args);
 	}
-	static acosh(...args){
+	static acosh(...args) {
 		Math.acosh(...args);
 	}
-	static asin(...args){
+	static asin(...args) {
 		Math.asin(...args);
 	}
-	static asinh(...args){
+	static asinh(...args) {
 		Math.asinh(...args);
 	}
-	static atan(...args){
+	static atan(...args) {
 		Math.atan(...args);
 	}
-	static atan2(...args){
+	static atan2(...args) {
 		Math.atan2(...args);
 	}
-	static atanh(...args){
+	static atanh(...args) {
 		Math.atanh(...args);
 	}
-	static ceil(...args){
+	static ceil(...args) {
 		Math.ceil(...args);
 	}
-	static comb(...args){
+	static comb(...args) {
 		Math.comb(...args);
 	}
-	static copysign(...args){
+	static copysign(...args) {
 		Math.copysign(...args);
 	}
-	static cos(...args){
+	static cos(...args) {
 		Math.cos(...args);
 	}
-	static cosh(...args){
+	static cosh(...args) {
 		Math.cosh(...args);
 	}
 	static degrees(__x) {
@@ -375,7 +375,7 @@ class math {
 		}
 		return out;
 	}
-	static floor(...args){
+	static floor(...args) {
 		Math.floor(...args);
 	}
 	static fmod(x, y) {
@@ -427,7 +427,7 @@ class math {
 		}
 		return a;
 	}
-	static hypot(...args){
+	static hypot(...args) {
 		Math.hypot(...args);
 	}
 	static isClose(a, b, relTol = 1e-9, absTol = 0) {
@@ -462,7 +462,7 @@ class math {
 	static isinf(__x) {
 		return __x == Infinity;
 	}
-	static isnan(...args){
+	static isnan(...args) {
 		isNaN(...args);
 	}
 
@@ -496,19 +496,19 @@ class math {
 
 		return Math.log(Math.sqrt(2 * Math.PI) * Math.pow(t, x + 0.5) * Math.exp(-t) * a);
 	}
-	static log(...args){
+	static log(...args) {
 		Math.log(...args);
 	}
 
-	static log10(...args){
+	static log10(...args) {
 		Math.log10(...args);
 	}
 
-	static log1p(...args){
+	static log1p(...args) {
 		Math.log1p(...args);
 	}
 
-	static log2(...args){
+	static log2(...args) {
 		Math.log2(...args);
 	}
 
@@ -538,22 +538,22 @@ class math {
 		// let remainder = x % absY;
 		// return (remainder + sign * absY) % absY;
 	}
-	static sin(...args){
+	static sin(...args) {
 		Math.sin(...args);
 	}
-	static sinh(...args){
+	static sinh(...args) {
 		Math.sinh(...args);
 	}
 	static sqrt(__x) {
 		return __x ** 0.5;
 	}
-	static tan(...args){
+	static tan(...args) {
 		Math.tan(...args);
 	}
-	static tanh(...args){
+	static tanh(...args) {
 		Math.tanh(...args);
 	}
-	static trunc(...args){
+	static trunc(...args) {
 		Math.trunc(...args);
 	}
 }
@@ -562,30 +562,30 @@ math.pi = 3.141592653589793;
 math.tau = 6.283185307179586;
 math.inf = Infinity;
 math.nan = NaN;
-function abs(n){
+function abs(n) {
 	return Math.abs(n);
 }
 
-function all(iterable){
-	return iterable.includes(false)?false:true;
+function all(iterable) {
+	return iterable.includes(false) ? false : true;
 }
 
-function bool(object){
-	(object.length==0 || object==false || object === 0 || object == undefined)?false:true;
+function bool(object) {
+	(object.length == 0 || object == false || object === 0 || object == undefined) ? false : true;
 }
-function pow(a,b){
-	return a**b;
+function pow(a, b) {
+	return a ** b;
 }
-function min(...args){
-	if (typeof args[0] == "object"){
+function min(...args) {
+	if (typeof args[0] == "object") {
 		return Math.min(...args[0]);
 	} else {
 		return Math.min(...args);
 	}
 }
 
-function max(...args){
-	if (typeof args[0] == "object"){
+function max(...args) {
+	if (typeof args[0] == "object") {
 		return Math.max(...args[0]);
 	} else {
 		return Math.max(...args);
@@ -602,19 +602,19 @@ String.prototype.capitalize = function (theStr) {
 // 	return theStr.toLowerCase();
 // }
 
-String.prototype.lower = function (inputs=undefined) {
+String.prototype.lower = function (inputs = undefined) {
 	let theStr = this;
 	return theStr.toLowerCase();
 };
 
-String.prototype.upper = function (inputs=undefined) {
+String.prototype.upper = function (inputs = undefined) {
 	let theStr = this;
 	return theStr.toUpperCase();
 };
 
-String.prototype.functionName = function (theStr) {
-	let inputs = this;
-	return theStr;
+String.prototype.strip = function (chars) {
+	let theStr = this;
+	this.trim()
 };
 
 
