@@ -70,6 +70,8 @@
 * math.tan()
 * math.tanh()
 * string.capitalize()
+* string.lower()
+* string.upper()
 */
 /* TODO
 https://www.w3schools.com/python/python_ref_functions.asp
@@ -97,7 +99,6 @@ TODO string.isspace()
 TODO string.istitle()
 TODO string.isupper()
 TODO string.ljust()
-TODO string.lower()
 TODO string.lstrip()
 TODO string.maketrans()
 TODO string.partition()
@@ -113,7 +114,6 @@ TODO string.strip()
 TODO string.swapcase()
 TODO string.title()
 TODO string.translate()
-TODO string.upper()
 TODO string.zfill()
 TODO Array prototype modifications https://www.w3schools.com/python/python_ref_list.asp
 TODO Dictionary prototype modifications https://www.w3schools.com/python/python_ref_dictionary.asp
@@ -600,9 +600,25 @@ String.prototype.capitalize = function (theStr) {
 // String.prototype.casefold = function (theStr) {
 // 	let inputs = this;
 // 	return theStr.toLowerCase();
-// };
+// }
 
-// String.prototype.functionName = function (theStr) {
-// 	let inputs = this;
-// 	return ;
-// };
+String.prototype.lower = function (inputs=undefined) {
+	let theStr = this;
+	return theStr.toLowerCase();
+};
+
+String.prototype.upper = function (inputs=undefined) {
+	let theStr = this;
+	return theStr.toUpperCase();
+};
+
+String.prototype.functionName = function (theStr) {
+	let inputs = this;
+	return theStr;
+};
+
+
+String.prototype.functionName = function (theStr) {
+	let inputs = this;
+	return theStr;
+};
