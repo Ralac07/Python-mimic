@@ -606,5 +606,3 @@ String.prototype.capitalize = function (theStr) {
 // 	let inputs = this;
 // 	return ;
 // };
-
-print(math.pi)
