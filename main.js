@@ -69,13 +69,14 @@
 * math.sqrt()
 * math.tan()
 * math.tanh()
+* string.capitalize()
 */
 /* TODO
 https://www.w3schools.com/python/python_ref_functions.asp
 TODO String prototype modifications https://www.w3schools.com/python/python_ref_string.asp
-TODO string.capitalize()
-TODO string.casefold()
+TODO string.casefold() proving difficult, will return to later
 TODO string.center()
+TODO string.count()
 TODO string.encode() might be difficult
 TODO string.endswith()
 TODO string.expandtabs()
@@ -253,18 +254,19 @@ function ord(__c) {
 String.prototype.join = function (arr) {
 	return arr.join(this);
 };
-print = console.log;
-
+function print(...args){
+	console.log(...args);
+}
 const True = true;
 const False = false;
 
 // https://www.w3schools.com/python/module_math.asp
 class math {
-	static e = 2.718281828459045;
-	static pi = 3.141592653589793;
-	static tau = 6.283185307179586;
-	static inf = Infinity;
-	static nan = NaN;
+	e = 2.718281828459045;
+	pi = 3.141592653589793;
+	tau = 6.283185307179586;
+	inf = Infinity;
+	nan = NaN;
 	static acos(...args){
 		Math.acos(...args);
 	}
@@ -594,10 +596,12 @@ String.prototype.capitalize = function (theStr) {
 	let temp = theStr.shift();
 	return temp.toUpperCase() + theStr.toLowerCase();
 };
-String.prototype.casefold = function (theStr) {
-	//let inputs = this;
-	// return theStr.toLowerCase();
-};
+// String.prototype.casefold = function (theStr) {
+// 	let inputs = this;
+// 	return theStr.toLowerCase();
+// };
 
-console.log("ß".toLocaleLowerCase())
-console.log("ß".toLowerCase())
+// String.prototype.functionName = function (theStr) {
+// 	let inputs = this;
+// 	return ;
+// };
