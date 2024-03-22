@@ -72,6 +72,8 @@
 * string.capitalize()
 * string.lower()
 * string.upper()
+
+* list.reverse() already exists
 */
 /* TODO
 https://www.w3schools.com/python/python_ref_functions.asp
@@ -612,13 +614,14 @@ String.prototype.upper = function (inputs = undefined) {
 	return theStr.toUpperCase();
 };
 
-String.prototype.strip = function (chars) {
-	let theStr = this;
-	this.trim()
-};
+// String.prototype.strip = function (chars) {
+// 	let theStr = this;
+// 	this.trim()
+// };
 
 
 String.prototype.functionName = function (theStr) {
 	let inputs = this;
 	return theStr;
 };
+
