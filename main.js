@@ -29,8 +29,8 @@
 * math.atan2()
 * math.atanh()
 * math.ceil()
-* math.comb()
-* math.copysign()
+* 
+* 
 * math.cos()
 * math.cosh()
 * math.degrees()
@@ -77,6 +77,8 @@
 */
 /* TODO
 https://www.w3schools.com/python/python_ref_functions.asp
+TODO math.comb()
+TODO math.copysign() this one should be easy, save for a breather after a more difficult function
 TODO String prototype modifications https://www.w3schools.com/python/python_ref_string.asp
 TODO string.casefold() proving difficult, will return to later
 TODO string.center()
@@ -289,12 +291,7 @@ class math {
 	static ceil(...args) {
 		return Math.ceil(...args);
 	}
-	static comb(...args) {
-		return Math.comb(...args);
-	}
-	static copysign(...args) {
-		return Math.copysign(...args);
-	}
+
 	static cos(...args) {
 		return Math.cos(...args);
 	}
@@ -528,13 +525,13 @@ class math {
 		return start
 	}
 	static radians(__x) {
-		return degrees * (Math.PI / 180);
+		return __x * (Math.PI / 180);
 	}
 	static remainder(x, y) {
 		// if (y === 0) {
 		// 	return x;
 		// }
-		return y === 0 ? x : ((x % absY) + Math.sign(y) * Math.abs(y)) % Math.abs(y);
+		return y === 0 ? x : ((x % Math.abs(y)) + Math.sign(y) * Math.abs(y)) % Math.abs(y);
 		// let sign = Math.sign(y);
 		// let absY = Math.abs(y);
 		// let remainder = x % absY;
