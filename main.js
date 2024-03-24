@@ -266,40 +266,40 @@ const False = false;
 class math {
 
 	static acos(...args) {
-		Math.acos(...args);
+		return Math.acos(...args);
 	}
 	static acosh(...args) {
-		Math.acosh(...args);
+		return Math.acosh(...args);
 	}
 	static asin(...args) {
-		Math.asin(...args);
+		return Math.asin(...args);
 	}
 	static asinh(...args) {
-		Math.asinh(...args);
+		return Math.asinh(...args);
 	}
 	static atan(...args) {
-		Math.atan(...args);
+		return Math.atan(...args);
 	}
 	static atan2(...args) {
-		Math.atan2(...args);
+		return Math.atan2(...args);
 	}
 	static atanh(...args) {
-		Math.atanh(...args);
+		return Math.atanh(...args);
 	}
 	static ceil(...args) {
-		Math.ceil(...args);
+		return Math.ceil(...args);
 	}
 	static comb(...args) {
-		Math.comb(...args);
+		return Math.comb(...args);
 	}
 	static copysign(...args) {
-		Math.copysign(...args);
+		return Math.copysign(...args);
 	}
 	static cos(...args) {
-		Math.cos(...args);
+		return Math.cos(...args);
 	}
 	static cosh(...args) {
-		Math.cosh(...args);
+		return Math.cosh(...args);
 	}
 	static degrees(__x) {
 		return __x * (180 / Math.PI);
@@ -378,7 +378,7 @@ class math {
 		return out;
 	}
 	static floor(...args) {
-		Math.floor(...args);
+		return Math.floor(...args);
 	}
 	static fmod(x, y) {
 		return x % y * 1.0
@@ -430,7 +430,7 @@ class math {
 		return a;
 	}
 	static hypot(...args) {
-		Math.hypot(...args);
+		return Math.hypot(...args);
 	}
 	static isClose(a, b, relTol = 1e-9, absTol = 0) {
 		// Handle cases where either a or b is NaN
@@ -499,19 +499,19 @@ class math {
 		return Math.log(Math.sqrt(2 * Math.PI) * Math.pow(t, x + 0.5) * Math.exp(-t) * a);
 	}
 	static log(...args) {
-		Math.log(...args);
+		return Math.log(...args);
 	}
 
 	static log10(...args) {
-		Math.log10(...args);
+		return Math.log10(...args);
 	}
 
 	static log1p(...args) {
-		Math.log1p(...args);
+		return Math.log1p(...args);
 	}
 
 	static log2(...args) {
-		Math.log2(...args);
+		return Math.log2(...args);
 	}
 
 	static perm(n, r) {
@@ -541,22 +541,22 @@ class math {
 		// return (remainder + sign * absY) % absY;
 	}
 	static sin(...args) {
-		Math.sin(...args);
+		return Math.sin(...args);
 	}
 	static sinh(...args) {
-		Math.sinh(...args);
+		return Math.sinh(...args);
 	}
 	static sqrt(__x) {
 		return __x ** 0.5;
 	}
 	static tan(...args) {
-		Math.tan(...args);
+		return Math.tan(...args);
 	}
 	static tanh(...args) {
-		Math.tanh(...args);
+		return Math.tanh(...args);
 	}
 	static trunc(...args) {
-		Math.trunc(...args);
+		return Math.trunc(...args);
 	}
 }
 math.e = 2.718281828459045;
