@@ -1,5 +1,6 @@
 /* Functions
 ? Functions added so far
+* time.sleep()
 * random.random()
 * random.randint()
 * random.choice()
@@ -637,3 +638,21 @@ String.prototype.functionName = function (theStr) {
 	return theStr;
 };
 
+class time {
+
+	  static sleep(n) { // https://stackoverflow.com/a/74210440
+		Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n*1000);
+	  }
+}
+
+
+print(5)
+time.sleep(1)
+print(4)
+time.sleep(1)
+print(3)
+time.sleep(1)
+print(2)
+time.sleep(1)
+print(1)
+time.sleep(1)
