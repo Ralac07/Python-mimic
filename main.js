@@ -644,15 +644,3 @@ class time {
 		Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, n*1000);
 	  }
 }
-
-
-print(5)
-time.sleep(1)
-print(4)
-time.sleep(1)
-print(3)
-time.sleep(1)
-print(2)
-time.sleep(1)
-print(1)
-time.sleep(1)
